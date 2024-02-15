@@ -198,8 +198,8 @@ def model_train(epoches, models, train_dataloader, val_dataloader, device, optim
             # 计算平均每个批次的loss和mae以展示,len(train_dataloader)为批次数量
             train_loss_show = train_epoch_loss / len(train_dataloader)
             train_mae_show = train_epoch_mae / len(train_dataloader)
-            train_mse_show = train_epoch_mse / len(val_dataloader)
-            train_rmse_show = train_epoch_rmse / len(val_dataloader)
+            train_mse_show = train_epoch_mse / len(train_dataloader)
+            train_rmse_show = train_epoch_rmse / len(train_dataloader)
 
             # 每个epoch下每个样本的整条序列的loss
             # train_loss_show = train_epoch_loss / len(train_dataloader.dataset)
